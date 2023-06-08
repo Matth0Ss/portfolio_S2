@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Portfolio-Projet</title>
+  <link rel="stylesheet" href="stylee.css"/>
+</head>
+
+<body>
+  <main>
+    <div>
+      <aside>
+        <h2>Navigation</h2>
+        <ul>
+          <li><a href="Accueil.html">Accueil</a></li>
+          <li><a href="Formation.html">Formation</a></li>
+          <li class="actuel">Projets</li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </aside>
+
+      <section>
+        <ul class="projets">
+          <li><a href="#" class="project-link" data-target="project1">- Installation d'un poste de développement</a></li>
+          <li><a href="#" class="project-link" data-target="project2">- Création d'une base de données</a></li>
+          <li><a href="#" class="project-link" data-target="project3">- Recueil de besoins d'un client</a></li>
+        </ul>
+
+        <div class="contenu" style="margin: 0%;">
+          <div id="debut" style="display: block;">
+            <section >
+              <p>Sur cette page vous pouvais voir les différents projets que j'ai fait lors de mon parcours </p>
+            </section>
+          </div>
+
+          <div id="project1" style="display: none;">
+            <section>
+              <p>  Installation d'un poste de développement<br><br>
+                 Durée: 3 jours / SEA:S1.03 / Langage utilisé: Linux / projet en autonomie <br><br>
+                L'objectif de cette SAE était d'apprendre à installer un poste de travail et des outils de développement sont aussi Rendre compte des différentes étapes
+                et options de l’installation d’un poste pour le développement avec une carte mentale qu'on a construite pour ce projet. Le projet a duré trois jours les deux
+                Premiers jours sont pour l'apprentissage,1er jour porter sur l'Installation d'un systeme d'exploitation Linux sur debian 10 puis le 2ème jour c'est sur installation
+                 d’outils de développement dont un IDE (NetBeans) et le jour final c'est l'évaluation en autonomie qui dure 3h le but c'est refaire la meme chose que les autres jours 
+                mais avec des petits changement le systeme d'exploitation c'est Debian 11 et l'outils de développement qui est avec IntelliJ IDEA.
+                </p>
+            </section>
+          </div>
+          <div id="project2" style="display: none;">
+            <section>
+              <p> Création d'une base de données<br><br>
+                Durée: 1 mois / SEA:S1.04 / Langage utilisé: PSQL/ Projet en binome<br><br>
+               L'objectif de cette SAE était d'apprendre modéliser une base de données pour l'implémenter et la peupler.Le sujet c'était de reproduire une base de données du Titanic
+               pour répondre à la problèmatique qui est de trouver le facteur ayant influencé la survie d'un passager.Nous avons eu 5 séance dont 3 encadré et 2 en autonomie,dans cette SAE
+               il y avait 3 étapes et chaques étapes on avait un rendu daté.La première étape était de modéliser une SEA et chercher les informations qui vont permettre de repondre à la 
+               problematique puis la deuxième étape qui était de créer schéma du modèle relationnel à partir de la SEA et la création de la base et la dernière étape c'est de vérifié
+               la base avec de requete et puis de repondre à la problèmatique.
+               </p>
+            </section>
+          </div>
+          <div id="project3" style="display: none;">
+            <section>
+              <p> Recueil de besoins d'un client<br><br>
+                Durée: 5 jours / SEA:S1.05/S1.06 / Langage utilisé: HTML & CSS/ projet en groupe de 4<br><br>
+                Cette SAE consiste à créer un site via à une entreprise donner le but était que ce site dévait remédier à plusieurs plobléme de site de l'entreprise 
+                dont les pricipaux problèmes sont de mettre en avant les points forts de l’entreprise et en atténuant ses faiblesses,des termes techniques pour les proffessionnel
+                et etre dans la vogue du développement durable.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const projectLinks = document.querySelectorAll('.project-link');
+    const projectDivs = document.querySelectorAll('.contenu > div');
+    
+    function handleLinkClick(event) {
+      event.preventDefault();
+
+      const targetProject = this.getAttribute('data-target');
+      projectDivs.forEach(div => {
+        div.style.display = 'none';
+      });
+
+      document.getElementById(targetProject).style.display = 'block';
+    }
+
+    projectLinks.forEach(link => {
+      link.addEventListener('click', handleLinkClick);
+    });
+  </script>
+</body>
+</html>

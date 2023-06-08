@@ -1,0 +1,23 @@
+body{
+    
+    background-image: url(presstart.gif);
+    background-size:cover;
+}
+
+h1{
+    text-align: center;
+}
+
+
+a{
+   position: relative;
+   top: -23px;
+   left: -220px;
+    text-decoration: none;
+    color: blue;
+}
+div{
+    position:absolute;
+    top: 80%;
+    
+}
